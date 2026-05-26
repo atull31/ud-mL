@@ -1,1 +1,1 @@
-## End to End MAchine Learning Project by Atul
+## End to End Machine Learning Project by Atul

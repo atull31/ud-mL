@@ -1,7 +1,6 @@
 import os
 import sys
 from dataclasses import dataclass
-
 from catboost import CatBoostRegressor
 from sklearn.ensemble import (
     AdaBoostRegressor,
@@ -13,10 +12,8 @@ from sklearn.metrics import r2_score
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
-
 from src.exception import CustomException
 from src.logger import logging
-
 from src.utils import save_object,evaluate_models
 
 @dataclass
@@ -91,7 +88,6 @@ class ModelTrainer:
             best_model_score = max(sorted(model_report.values()))
 
             ## To get best model name from dict
-
             best_model_name = list(model_report.keys())[
                 list(model_report.values()).index(best_model_score)
             ]
